@@ -4,7 +4,17 @@ body {
     align-items: center;
     height: 90vh;
     background-color: rgb(216, 221, 206);
-    flex-direction: column; /* Vertically center everything */
+}
+
+#noButton {
+    position: absolute;
+    margin-left: 150px;
+    transition: 0.5s;
+}
+
+#yesButton {
+    position: absolute;
+    margin-right: 150px;
 }
 
 .header_text {
@@ -19,10 +29,11 @@ body {
 
 .buttons {
     display: flex;
-    justify-content: center;  /* Center the buttons */
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-top: 30px;
-    gap: 20px;  /* Space between buttons */
+    margin-top: 50px;
+    margin-left: 20px;
 }
 
 .btn {
@@ -30,14 +41,21 @@ body {
     color: rgb(255, 255, 255);
     padding: 20px 48px;
     text-align: center;
+    display: inline-block;
     font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
     border: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
 }
 
-/* Media queries for smaller screens */
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media only screen and (max-width: 250px) and (max-height: 500px) {
     body {
         height: 100vh;
@@ -52,7 +70,7 @@ body {
     }
 
     .btn {
-        padding: 15px 15px;
+        padding: 20px 20px;
         font-size: 12px;
     }
 }
